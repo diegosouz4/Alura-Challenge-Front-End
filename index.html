@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Alura - Front-end</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev">
+        <input class="header__search" type="search" name="" id="">
+        <div class="header__icons">
+            <button class="icon__search"><img src="./assets/img/icons/icone-search.svg" alt="busca"></button>
+            <button class="icon__menu"><span class="icon__menu__mobile"></span></button>
+        </div>
+        <div class="user">
+            <div class="user__thumb"></div>
+            <h3 class="user__name">Diego Souza</h3>
+        </div>
+    </header>
+
+    <section class="main">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="menu__link ativo" href="">
+                        <div class="menu__icon"><img src="./assets/img/icons/icon-code.svg" alt="Editor de código"></div>
+                        Editor de Código
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link ativo" href="">
+                        <div class="menu__icon"><img src="./assets/img/icons/icon-community.svg" alt="Comunidade"></div>
+                        Comunidade
+                    </a>
+                </li>
+            </ul>
+            <div class="user">
+                <div class="user__thumb"></div>
+                <h3 class="user__name">Diego Souza</h3>
+            </div>
+        </nav>
+
+        <section class="editor">
+            <div class="editor__container">
+                <textarea class="editor__code" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button class="editor__button button">Visualizar com o highlight</button>
+        </section>
+
+        <section class="project">
+            <div class="project__info">
+                <h2 class="project__title">Seu projeto</h2>
+                <input type="text" id="project__name" placeholder="Nome do seu projeto">
+                <input type="text" id="project__description" placeholder="Descrição do projeto">
+            </div>
+            <div class="project__settings">
+                <h2 class="project__title">Personalização</h2>
+                <select name="" id="">
+                    <option >HTML</option>
+                    <option >CSS</option>
+                    <option >Javascript</option>
+                </select>
+            </div>
+            <button class="project__button button">Salvar projeto</button>
+        </section>
+    </section>
+</body>
+
+</html>
