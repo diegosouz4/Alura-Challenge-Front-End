@@ -1,24 +1,36 @@
-input, select{
-    background: none;
-    background-color: var(--branco-16);
-    border:0;
-    border-radius: var(--border-radius);
-    color: var(--branco);
-    padding: 1rem;
-    transition: background var(--transition-default);
+input:not([type="color"]),
+select {
+  background: none;
+  background-color: var(--branco-16);
+  border: 0;
+  border-radius: var(--border-radius);
+  color: var(--branco);
+  padding: 1rem;
+  outline: none;
+  transition: background var(--transition-default);
 }
 
-input:hover, select:hover{
-    background-color: var(--branco-24);
+input:not([type="color"]):hover,
+select:hover {
+  background-color: var(--branco-24);
 }
 
-input::placeholder{
-    color: var(--branco-64);
+input:not([type="color"])::placeholder {
+  color: var(--branco-64);
 }
 
-option{
-    background: none;
-    background-color: var(--blue-400);
-    border: none;
-    outline: none;
+input[type="color"] {
+  background: none;
+  border: 0;
+  border: 1px solid var(--branco);
+  border-radius: calc(var(--border-radius) / 4 );
+  height: 3.5rem;
+  padding: .5rem;
+}
+
+option {
+  background: none;
+  background-color: var(--blue-400);
+  border: none;
+  outline: none;
 }

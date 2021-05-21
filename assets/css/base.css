@@ -17,6 +17,10 @@
     --blue-rgba-300: 80, 129, 251;
     --blue-rgba-400: 5, 29, 59;
 
+    --mac-red: #ff5f56;
+    --mac-yellow: #ffbd2e;
+    --mac-green: #27c93f;
+
     --gray-300: #141414;
 
     --box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .24);
@@ -35,12 +39,11 @@ body{
     font-weight: 700;
 }
 
-.hide{
-  display: none;  
-}
-
-.container{
-    margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
+h2{
+    font-size: .75rem;
+    font-weight: 400;
+    color: var(--branco);
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    line-height: 1.5;
 }

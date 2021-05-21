@@ -1,0 +1,28 @@
+.main {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.editor {
+  margin-bottom: 2rem;
+}
+
+.editor__container {
+  margin-bottom: 2rem;
+}
+
+.editor__button {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+  }
+  .editor{
+    flex-grow: 2;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}

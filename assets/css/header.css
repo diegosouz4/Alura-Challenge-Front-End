@@ -1,3 +1,13 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem ;
+}
+
+.header__user, .header__search{
+    display: none;
+}
+
 .icon__menu{
     position: relative;
 }
@@ -44,4 +54,16 @@
 .is--open .icon__menu__mobile::before{
     transform: translateX(-66%) rotateZ(45deg);
     transform-origin: bottom right;
+}
+
+@media screen and (min-width: 768px){
+    .header__search{
+        display: block;
+        flex-grow: 2;
+        max-width: 60vw;
+        margin: 0 2.5rem;
+    }
+    .icon__search{
+        display: none;
+    }
 }

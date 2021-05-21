@@ -1,0 +1,50 @@
+.project__info,
+.project__settings {
+  margin-bottom: 2rem;
+}
+
+.project input,
+.project select {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.project input[type="color"] {
+  margin-bottom: 0;
+}
+
+.project > button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .project__settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project__title {
+    width: 100%;
+  }
+
+  input[type="color"],
+  .project select {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project {
+    flex-grow: 1;
+  }
+
+  input[type="color"],
+  .project select {
+    width: 100%;
+  }
+  .project select {
+    margin-bottom: 1rem;
+  }
+}
