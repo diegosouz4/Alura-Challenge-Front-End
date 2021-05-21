@@ -1,3 +1,47 @@
+.icon__menu{
+    position: relative;
+}
+
 .icon__menu__mobile{
-    
+    background-color: var(--branco);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    height: 3px;
+    width: 1.25rem;
+    margin: calc((1.25rem - 3px) / 2 ) 0;
+}
+
+.icon__menu__mobile::after, .icon__menu__mobile::before{
+    background-color: var(--branco);
+    border-radius: var(--border-radius);
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 1.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(0deg);
+    transition: transform var(--transition-default);
+}
+
+.icon__menu__mobile::after{
+    top: 10px;
+}
+
+.icon__menu__mobile::before{
+    bottom: 12px;
+}
+
+.is--open .icon__menu__mobile{
+    background-color: var(--blue-400);
+}
+
+.is--open .icon__menu__mobile::after{
+    transform: translateX(-66%) rotateZ(-45deg);
+    transform-origin: top right;
+}
+
+.is--open .icon__menu__mobile::before{
+    transform: translateX(-66%) rotateZ(45deg);
+    transform-origin: bottom right;
 }

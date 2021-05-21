@@ -34,3 +34,13 @@ body{
     font-family: var(--font-principal);
     font-weight: 700;
 }
+
+.hide{
+  display: none;  
+}
+
+.container{
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
