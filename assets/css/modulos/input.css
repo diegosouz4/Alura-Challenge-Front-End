@@ -1,0 +1,24 @@
+input, select{
+    background: none;
+    background-color: var(--branco-16);
+    border:0;
+    border-radius: var(--border-radius);
+    color: var(--branco);
+    padding: 1rem;
+    transition: background var(--transition-default);
+}
+
+input:hover, select:hover{
+    background-color: var(--branco-24);
+}
+
+input::placeholder{
+    color: var(--branco-64);
+}
+
+option{
+    background: none;
+    background-color: var(--blue-400);
+    border: none;
+    outline: none;
+}

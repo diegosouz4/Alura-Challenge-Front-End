@@ -1,0 +1,42 @@
+.editor__container{
+    align-items: center;
+    background: #6bd1ff;
+    border-radius: calc(var(--border-radius) / 2);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.editor__code{
+    background: var(--gray-300);
+    border: 0;
+    border-radius: calc(var(--border-radius)/2);
+    box-shadow: var(--box-shadow);
+    color: var(--branco);
+    font-family: var(--font-secundaria);
+    font-size: .6875rem;
+    font-weight: 400;
+    max-width: 688px;
+    max-height: 300px;
+    min-width: 688px;
+    min-height: 300px;
+    padding: .75rem;
+    resize: none;
+    outline: none;
+}
+
+.editor__code:focus{
+   outline: 1px solid var(--blue-300);
+}
+
+.editor__code::-webkit-scrollbar-button{
+    background: rgba(var(--blue-rgba-300), .1);
+}
+
+.editor__code::-webkit-scrollbar-thumb{
+    background: rgba(var(--blue-rgba-200), .3);
+}
+
+.editor__code::-webkit-scrollbar{
+    background: var(--blue-400);
+}

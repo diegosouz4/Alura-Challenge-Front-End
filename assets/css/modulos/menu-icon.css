@@ -1,0 +1,19 @@
+.menu__icon{
+    background-color: rgba(var(--blue-rgba-300), .16 );
+    border-radius: 1rem;
+    display: inline-block;
+    padding:.5rem;
+    transition: background var(--transition-default);
+}
+
+.menu__icon:hover{
+    background-color: rgba(var(--blue-rgba-300), .64 );
+}
+
+.menu__icon:active{
+    background-color: var(--blue-rgba-300);
+}
+
+.menu__icon--ativo{
+    background-color: var(--blue-300);
+}

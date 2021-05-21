@@ -6,16 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Alura - Front-end</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/modulos/input.css">
+    <link rel="stylesheet" href="./assets/css/modulos/button.css">
+    <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css">
+    <link rel="stylesheet" href="./assets/css/modulos/code-editor.css">
+    <link rel="stylesheet" href="./assets/css/modulos/user.css">
 </head>
 
 <body>
     <header class="header">
         <img class="header__logo" src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev">
+
         <input class="header__search" type="search" name="" id="">
+
         <div class="header__icons">
-            <button class="icon__search"><img src="./assets/img/icons/icone-search.svg" alt="busca"></button>
-            <button class="icon__menu"><span class="icon__menu__mobile"></span></button>
+            <button class="icon__search button button--icon"><img src="./assets/img/icons/icone-search.svg" alt="busca"></button>
+            <button class="icon__menu button button--icon"><span class="icon__menu__mobile"></span></button>
         </div>
+
         <div class="user">
             <div class="user__thumb"></div>
             <h3 class="user__name">Diego Souza</h3>
@@ -26,13 +39,13 @@
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a class="menu__link ativo" href="">
-                        <div class="menu__icon"><img src="./assets/img/icons/icon-code.svg" alt="Editor de código"></div>
+                    <a class="menu__link" href="#">
+                        <div class="menu__icon menu__icon--ativo"><img src="./assets/img/icons/icon-code.svg" alt="Editor de código"></div>
                         Editor de Código
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link ativo" href="">
+                    <a class="menu__link ativo" href="#">
                         <div class="menu__icon"><img src="./assets/img/icons/icon-community.svg" alt="Comunidade"></div>
                         Comunidade
                     </a>
@@ -46,9 +59,10 @@
 
         <section class="editor">
             <div class="editor__container">
-                <textarea class="editor__code" name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="editor__code" name="" id="">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
+                </textarea>
             </div>
-            <button class="editor__button button">Visualizar com o highlight</button>
+            <button class="editor__button button button--outline">Visualizar com o highlight</button>
         </section>
 
         <section class="project">
@@ -60,12 +74,12 @@
             <div class="project__settings">
                 <h2 class="project__title">Personalização</h2>
                 <select name="" id="">
-                    <option >HTML</option>
-                    <option >CSS</option>
-                    <option >Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
                 </select>
             </div>
-            <button class="project__button button">Salvar projeto</button>
+            <button class="project__button button button--fill">Salvar projeto</button>
         </section>
     </section>
 </body>

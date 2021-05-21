@@ -1,0 +1,59 @@
+.button{
+    border-radius: var(--border-radius);
+    border: var(--border-pressed) var(--blue-400);
+    color: var(--blue-400);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 400;
+    padding: 1rem;
+    transition: background var(--transition-default);
+    transition: border var(--transition-default);
+}
+
+.button--fill{
+    background-color: var(--blue-300);
+}
+
+.button--fill:hover{
+    background-color: var(--blue-200);
+}
+
+.button--fill:active{
+    background-color: var(--blue-200);
+    border: var(--border-pressed) rgba(var(--blue-rgba-300), .72);
+}
+
+.button--fill:focus{
+    background-color: var(--blue-100);
+}
+
+
+.button--outline{
+    background-color: rgba(var(--blue-rgba-300), .08);
+    color: var(--branco);
+}
+
+.button--outline:hover{
+    background-color: rgba(var(--blue-rgba-300), .16);
+}
+
+.button--outline:active{
+    background-color: rgba(var(--blue-rgba-300), .16);
+    border: var(--border-pressed) rgba(var(--blue-rgba-300), .24);
+}
+
+.button--outline:focus{
+    background-color: rgba(var(--blue-rgba-300), .24);
+}
+
+.button--icon{
+    border-radius: calc(var(--border-radius)*2);
+    color: varr(--branco);
+    padding: .5rem;
+}
+.button--icon:hover{
+    background-color: rgba(var(--blue-rgba-300), .08);
+}
+.button--icon:active{
+    background-color: rgba(var(--blue-rgba-300), .16);
+}

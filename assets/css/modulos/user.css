@@ -1,0 +1,27 @@
+.user {
+    align-items: center;
+    border-radius: calc(var(--border-radius) / 2);
+    display: flex;
+    max-width: 30vw;
+    padding: .75rem;
+    transition: background var(--transition-default);
+}
+
+.user:hover {
+    background-color: var(--branco-8);
+}
+
+.user__thumb {
+    background: url('../../img/user-diego.jpg') no-repeat center / cover;
+    border-radius: 100%;
+    height: 2rem;
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+.user__name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--branco);
+}
