@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Alura - Front-end</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -25,12 +26,15 @@
 
 <body>
     <header class="header container">
-        <img class="header__logo" src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev">
+        <a class="header__logo" href="">
+            <img src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev">
+        </a>
 
         <input class="header__search" type="search" placeholder="Busque por algo">
 
         <div class="header__icons">
-            <button class="icon__search button button--icon"><img src="./assets/img/icons/icone-search.svg" alt="busca"></button>
+            <button class="icon__search button button--icon"><img src="./assets/img/icons/icone-search.svg"
+                    alt="busca"></button>
             <button class="icon__menu button button--icon"><span class="icon__menu__mobile"></span></button>
         </div>
 
@@ -40,12 +44,13 @@
         </div>
     </header>
 
-    <section class="main container">
-        <nav class="menu is--hide">
+    <section class="home__main container">
+        <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item">
                     <a class="menu__link link--active" href="#">
-                        <div class="menu__icon"><img src="./assets/img/icons/icon-code.svg" alt="Editor de código"></div>
+                        <div class="menu__icon"><img src="./assets/img/icons/icon-code.svg" alt="Editor de código">
+                        </div>
                         Editor de Código
                     </a>
                 </li>
@@ -56,7 +61,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="user">
+            <div class="menu__user user">
                 <div class="user__thumb"></div>
                 <h3 class="user__name">Diego Souza</h3>
             </div>
@@ -64,7 +69,8 @@
 
         <div class="main__search is--hide">
             <input type="search" placeholder="Busque por algo" class="search__bar">
-            <button class="search__button button button--icon"><img src="./assets/img/icons/icon-close.svg" alt="fechar busca"></button>
+            <button class="search__button button button--icon"><img src="./assets/img/icons/icon-close.svg"
+                    alt="fechar busca"></button>
         </div>
 
         <section class="editor">
@@ -84,14 +90,15 @@
             <div class="project__info">
                 <h2 class="project__title">Seu projeto</h2>
                 <input type="text" id="project__name" placeholder="Nome do seu projeto">
-                <input type="text" id="project__description" placeholder="Descrição do projeto">
+                <textarea class="input" id="project__description" rows="5"
+                    placeholder="Descrição do projeto"></textarea>
             </div>
             <div class="project__settings">
                 <h2 class="project__title">Personalização</h2>
                 <select name="" id="">
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
                     <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="CSS">CSS</option>
                 </select>
 
                 <input type="color" value="#6bd1ff" class="project__color">

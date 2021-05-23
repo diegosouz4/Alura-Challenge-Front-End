@@ -4,8 +4,13 @@
 }
 
 .project input,
-.project select {
+.project select,
+.project .input {
   width: 100%;
+}
+
+.project input,
+.project select {
   margin-bottom: 1rem;
 }
 
@@ -13,7 +18,7 @@
   margin-bottom: 0;
 }
 
-.project > button {
+.project>button {
   width: 100%;
 }
 
@@ -24,6 +29,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .project__title {
     width: 100%;
   }
@@ -37,13 +43,13 @@
 
 @media screen and (min-width: 1024px) {
   .project {
-    flex-grow: 1;
   }
 
   input[type="color"],
   .project select {
     width: 100%;
   }
+
   .project select {
     margin-bottom: 1rem;
   }
