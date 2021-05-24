@@ -2,7 +2,6 @@
     align-items: center;
     border-radius: calc(var(--border-radius) / 2);
     display: flex;
-    max-width: 30vw;
     padding: .75rem;
     transition: background var(--transition-default);
 }

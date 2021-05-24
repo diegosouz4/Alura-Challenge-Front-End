@@ -1,48 +1,105 @@
 .menu {
-    /* display: none; */
+  right: -100%;
+  transition: right .7s cubic-bezier(0.49,-0.24, 0.57, 1.26);
 }
 
 .menu__list {
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--branco-8);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--branco-8);
 }
 
 .menu__item:nth-child(1) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .menu__link {
-    color: var(--branco-56);
-    font-size: 1rem;
-    font-weight: normal;
+  color: var(--branco-56);
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .menu__link:hover {
-    color: var(--branco-72);
+  color: var(--branco-72);
 }
 
 .menu__link:active {
-    color: var(--branco);
+  color: var(--branco);
 }
 
 .link--active {
-    color: var(--branco);
+  color: var(--branco);
+}
+
+.menu__is--open {
+  right: 0.625rem;
+}
+
+.main__search{
+  display: flex;
+  opacity: 0;
+  padding: 0 2rem;
+  position: absolute;
+  right: 0;
+  transition: opacity .2s ease-in-out;
+  transition: top .7s cubic-bezier(0.49,-0.24, 0.57, 1.26);
+  top: 150vh;
+  width: 100%;
+  z-index: 2;
+
+}
+
+.main__search > input{
+  background-color: var(--blue-350);
+  border: 2px solid transparent;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.main__search > input:hover{
+  background-color: var(--blue-350);
+  border: 2px solid var(--blue-300);
+}
+
+.is--visible{
+  top: calc(70vh + 2rem);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    background-color: var(--blue-350);
+    border-radius: calc(var(--border-radius) / 2);
+    box-shadow: var(--box-shadow);
+    height: 70vh;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    width: 40vw;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    width: 70vw;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .menu{
-        display: block;
-        position: initial;
-    }
+  .menu {
+    display: block;
+    position: initial;
+  }
 
-    .menu__list {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: 0;
-    }
+  .menu__list {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
 
-    .menu__user {
-        display: none;
-    }
+  .menu__user {
+    display: none;
+  }
 }

@@ -1,6 +1,6 @@
 .button{
     border-radius: var(--border-radius);
-    border: var(--border-pressed) var(--blue-400);
+    border: var(--border-pressed) transparent;
     color: var(--blue-400);
     cursor: pointer;
     font-family: inherit;
