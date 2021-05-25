@@ -3,6 +3,11 @@
   margin-bottom: 2rem;
 }
 
+.editor__card:hover .card__actions {
+  opacity: 1;
+  height: 56px;
+}
+
 .editor__card:last-child {
   margin-bottom: 0;
 }
@@ -33,6 +38,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.42, -0.43, 0.51, 1.47);
 }
 
 .actions__icones {
