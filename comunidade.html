@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Alura - Front-end</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/input.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/button.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/code-editor.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/user.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/card.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/helpers.css" />
+    <link rel="stylesheet" href="./assets/css/paginas/comunidade.css" />
+    <link rel="stylesheet" href="./assets/css/aside.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+  </head>
+
+  <body>
+    <header class="header container">
+      <h1 class="header__title">
+        <a class="header__logo" href="./index.html">
+          <img src="./assets/img/logo-aluraDev.svg" alt="Logo Alura Dev" />
+        </a>
+      </h1>
+
+      <input
+        class="header__search"
+        type="search"
+        placeholder="Busque por algo"
+      />
+
+      <div class="header__icons">
+        <button id="botaoBusca" class="icon__search button button--icon">
+          <img src="./assets/img/icons/icone-search.svg" alt="busca" />
+        </button>
+        <button id="botaoMenu" class="icon__menu button button--icon">
+          <span class="icon__menu__mobile"></span>
+        </button>
+      </div>
+
+      <div class="user__container">
+        <div class="header__user user">
+          <div class="user__thumb"></div>
+          <h3 class="user__name">Diego Souza</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="comunidade__main container">
+      <nav class="menu">
+        <h2 class="menu__title">Menu</h2>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="./index.html">
+              <div class="menu__icon">
+                <img
+                  src="./assets/img/icons/icon-code.svg"
+                  alt="Editor de código"
+                />
+              </div>
+              Editor de Código
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link--active" href="./comunidade.html">
+              <div class="menu__icon">
+                <img
+                  src="./assets/img/icons/icon-community.svg"
+                  alt="Comunidade"
+                />
+              </div>
+              Comunidade
+            </a>
+          </li>
+        </ul>
+        <div class="menu__user user">
+          <div class="user__thumb"></div>
+          <h3 class="user__name">Diego Souza</h3>
+        </div>
+      </nav>
+
+      <div id="searchBar" class="main__search">
+        <input
+          type="search"
+          placeholder="Busque por algo"
+          class="search__bar"
+        />
+        <button id="closeBusca" class="search__button button button--icon">
+          <img src="./assets/img/icons/icon-close.svg" alt="fechar busca" />
+        </button>
+      </div>
+
+      <section class="editor">
+        <div class="editor__card">
+          <div id="editorBG" class="editor__container">
+            <textarea class="editor__code">
+      const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
+                      </textarea
+            >
+            <div class="dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+          </div>
+
+          <div class="card__content">
+            <div class="card__description">
+              <h2 class="card__titulo">Título do projeto</h2>
+              <p class="card__about">Essa é a descrição do meu projeto.</p>
+            </div>
+            <div class="card__actions">
+              <div class="actions__icones">
+                <button class="icon__comment button button--icon">
+                  <img
+                    src="./assets/img/icons/icon-comment.svg"
+                    alt="comentários"
+                  />
+                  <span class="count">1</span>
+                </button>
+                <button class="icon__like button button--icon">
+                  <svg
+                    class="heart"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="likes"
+                      d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"
+                    />
+                  </svg>
+                  <span class="count">1</span>
+                </button>
+              </div>
+              <div class="actions__user__container">
+                <div class="card__user user">
+                  <div class="user__thumb"></div>
+                  <h3 class="user__name">Diego Souza</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="editor__card">
+          <div id="editorBG" class="editor__container">
+            <textarea class="editor__code">
+        const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
+                        </textarea
+            >
+            <div class="dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+          </div>
+
+          <div class="card__content">
+            <div class="card__description">
+              <h2 class="card__titulo">Título do projeto</h2>
+              <p class="card__about">Essa é a descrição do meu projeto.</p>
+            </div>
+            <div class="card__actions">
+              <div class="actions__icones">
+                <button class="icon__comment button button--icon">
+                  <img
+                    src="./assets/img/icons/icon-comment.svg"
+                    alt="comentários"
+                  />
+                  <span class="count">1</span>
+                </button>
+                <button class="icon__like button button--icon">
+                  <svg
+                    class="heart"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="likes"
+                      d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"
+                    />
+                  </svg>
+                  <span class="count">1</span>
+                </button>
+              </div>
+              <div class="actions__user__container">
+                <div class="card__user user">
+                  <div class="user__thumb"></div>
+                  <h3 class="user__name">Diego Souza</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="editor__card">
+          <div id="editorBG" class="editor__container">
+            <textarea class="editor__code">
+        const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
+                        </textarea
+            >
+            <div class="dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+          </div>
+
+          <div class="card__content">
+            <div class="card__description">
+              <h2 class="card__titulo">Título do projeto</h2>
+              <p class="card__about">Essa é a descrição do meu projeto.</p>
+            </div>
+            <div class="card__actions">
+              <div class="actions__icones">
+                <button class="icon__comment button button--icon">
+                  <img
+                    src="./assets/img/icons/icon-comment.svg"
+                    alt="comentários"
+                  />
+                  <span class="count">1</span>
+                </button>
+                <button class="icon__like button button--icon">
+                  <svg
+                    class="heart"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="likes"
+                      d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"
+                    />
+                  </svg>
+                  <span class="count">1</span>
+                </button>
+              </div>
+              <div class="actions__user__container">
+                <div class="card__user user">
+                  <div class="user__thumb"></div>
+                  <h3 class="user__name">Diego Souza</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="editor__card">
+          <div id="editorBG" class="editor__container">
+            <textarea class="editor__code">
+          const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
+                          </textarea
+            >
+            <div class="dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+          </div>
+
+          <div class="card__content">
+            <div class="card__description">
+              <h2 class="card__titulo">Título do projeto</h2>
+              <p class="card__about">Essa é a descrição do meu projeto.</p>
+            </div>
+            <div class="card__actions">
+              <div class="actions__icones">
+                <button class="icon__comment button button--icon">
+                  <img
+                    src="./assets/img/icons/icon-comment.svg"
+                    alt="comentários"
+                  />
+                  <span class="count">1</span>
+                </button>
+                <button class="icon__like button button--icon">
+                  <svg
+                    class="heart"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="likes"
+                      d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z"
+                    />
+                  </svg>
+                  <span class="count">1</span>
+                </button>
+              </div>
+              <div class="actions__user__container">
+                <div class="card__user user">
+                  <div class="user__thumb"></div>
+                  <h3 class="user__name">Diego Souza</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="./assets/js/menu-Mobile.js"></script>
+  </body>
+</html>

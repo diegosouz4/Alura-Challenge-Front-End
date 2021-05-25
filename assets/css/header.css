@@ -69,7 +69,7 @@
   transform-origin: bottom right;
 }
 
-.is--open .menu{
+.is--open .menu {
   right: 1rem;
 }
 
@@ -95,9 +95,10 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .header__search {
     width: 50%;
+    margin: 0;
   }
 
   .header__icons {

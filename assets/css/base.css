@@ -1,51 +1,54 @@
-:root{
-    --branco:#fff;
-    --branco-8:rgba(255, 255, 255, .08);
-    --branco-16:rgba(255, 255, 255, .16);
-    --branco-24:rgba(255, 255, 255, .24);
-    --branco-56:rgba(255, 255, 255, .56);
-    --branco-64:rgba(255, 255, 255, .64);
-    --branco-72:rgba(255, 255, 255, .72);
+:root {
+  --branco: #fff;
+  --branco-8: rgba(255, 255, 255, 0.08);
+  --branco-16: rgba(255, 255, 255, 0.16);
+  --branco-24: rgba(255, 255, 255, 0.24);
+  --branco-56: rgba(255, 255, 255, 0.56);
+  --branco-64: rgba(255, 255, 255, 0.64);
+  --branco-72: rgba(255, 255, 255, 0.72);
 
-    --blue-100: #96B9FD;
-    --blue-200: #7BA4FC;
-    --blue-300: #5081FB;
-    --blue-330: #41536a;
-    --blue-350: #2D415B;;
-    --blue-400: #051D3B;
+  --blue-100: #96b9fd;
+  --blue-200: #7ba4fc;
+  --blue-300: #5081fb;
+  --blue-330: #41536a;
+  --blue-350: #2d415b;
+  --blue-400: #051d3b;
 
-    --blue-rgba-100: 150, 185, 253;
-    --blue-rgba-200: 123, 164, 252;
-    --blue-rgba-300: 80, 129, 251;
-    --blue-rgba-400: 5, 29, 59;
+  --blue-rgba-100: 150, 185, 253;
+  --blue-rgba-200: 123, 164, 252;
+  --blue-rgba-300: 80, 129, 251;
+  --blue-rgba-400: 5, 29, 59;
 
-    --mac-red: #ff5f56;
-    --mac-yellow: #ffbd2e;
-    --mac-green: #27c93f;
+  --red: #f65151;
 
-    --gray-300: #141414;
+  --mac-red: #ff5f56;
+  --mac-yellow: #ffbd2e;
+  --mac-green: #27c93f;
 
-    --box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .24);
-    --font-principal: 'Inter', sans-serif;
-    --font-secundaria: 'Roboto Mono', monospace;
+  --gray-300: #141414;
+  --black-16: rgba(0, 0, 0, 0.16);
 
-    --border-radius: .5rem;
-    --border-pressed: 4px solid;
+  --box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.24);
+  --font-principal: "Inter", sans-serif;
+  --font-secundaria: "Roboto Mono", monospace;
 
-    --transition-default: .2s ease-in-out;
+  --border-radius: 0.5rem;
+  --border-pressed: 4px solid;
+
+  --transition-default: 0.2s ease-in-out;
 }
 
-body{
-    background-color: var(--blue-400);
-    font-family: var(--font-principal);
-    font-weight: 700;
+body {
+  background-color: var(--blue-400);
+  font-family: var(--font-principal);
+  font-weight: 700;
 }
 
-h2{
-    font-size: .75rem;
-    font-weight: 400;
-    color: var(--branco);
-    letter-spacing: .4rem;
-    text-transform: uppercase;
-    line-height: 1.5;
+h2 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--branco);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  line-height: 1.5;
 }

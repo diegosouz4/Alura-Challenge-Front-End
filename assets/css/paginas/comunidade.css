@@ -1,0 +1,21 @@
+.comunidade__main {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .comunidade__main {
+    display: flex;
+  }
+  .menu {
+    width: 25%;
+  }
+  .editor {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -20,14 +20,15 @@
 @media screen and (min-width: 1024px) {
   .home__main {
     display: flex;
+    justify-content: space-between;
   }
 
-  .editor{
+  .editor {
     width: 50%;
-    margin: 0 2.5rem;
   }
 
-  .menu, .project{
-    width: 25%;
+  .menu,
+  .project {
+    width: calc(25% - 1.25rem);
   }
 }
