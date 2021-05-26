@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/dracula.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/modulos/input.css" />
     <link rel="stylesheet" href="./assets/css/modulos/button.css" />
@@ -101,18 +102,20 @@
       </div>
 
       <section class="editor">
-        <div id="editorBG" class="editor__container">
-          <textarea class="editor__code">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }
-                </textarea
-          >
+        <div id="editorContainer" class="editor__container">
+          <code
+            class="editor__code hljs"
+            contenteditable="true"
+            aria-label="editor"
+          ></code>
+
           <div class="dots">
             <span class="dot dot--red"></span>
             <span class="dot dot--yellow"></span>
             <span class="dot dot--green"></span>
           </div>
         </div>
-        <button class="editor__button button button--outline">
+        <button id="chooseLang" class="editor__button button button--outline">
           Visualizar com o highlight
         </button>
       </section>
@@ -134,9 +137,9 @@ const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key]
         </div>
         <div class="project__settings">
           <h2 class="project__title">Personalização</h2>
-          <select>
+          <select id="codeLang">
             <option value="Javascript">Javascript</option>
-            <option value="Python">Python</option>
+            <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
           </select>
 
@@ -154,5 +157,10 @@ const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key]
     </section>
     <script src="./assets/js/menu-Mobile.js"></script>
     <script src="./assets/js/editor-color.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="./assets/js/highlight.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
