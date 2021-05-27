@@ -1,4 +1,4 @@
-const editorBG = document.querySelector('#editorBG');
+const editorBG = document.querySelector('#editorContainer');
 const editorColor = document.querySelector('#editorColor');
 
 editorColor.addEventListener('input', function(e){

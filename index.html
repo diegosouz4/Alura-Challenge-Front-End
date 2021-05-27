@@ -127,17 +127,18 @@
             type="text"
             id="project__name"
             placeholder="Nome do seu projeto"
+            data-title
           />
           <textarea
             class="input"
             id="project__description"
             rows="5"
-            placeholder="Descrição do projeto"
+            placeholder="Descrição do projeto" data-description
           ></textarea>
         </div>
         <div class="project__settings">
           <h2 class="project__title">Personalização</h2>
-          <select id="codeLang">
+          <select id="codeLang" data-codeLang>
             <option value="Javascript">Javascript</option>
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
@@ -147,20 +148,18 @@
             id="editorColor"
             type="color"
             value="#6bd1ff"
-            class="project__color"
+            class="project__color" data-color
           />
         </div>
-        <button class="project__button button button--fill">
+        <button data-save-btn class="project__button button button--fill">
           Salvar projeto
         </button>
       </aside>
     </section>
     <script src="./assets/js/menu-Mobile.js"></script>
     <script src="./assets/js/editor-color.js"></script>
+    <script src="./assets/js/salvaDados.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="./assets/js/highlight.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
   </body>
 </html>
