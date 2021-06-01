@@ -5,6 +5,30 @@
   overflow: hidden;
 }
 
+.editor__info {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  width: calc(100% - 3rem);
+}
+.comunidade__dots,
+.editor__lang{
+  flex: 1;
+}
+
+.editor__lang{
+  display: block;
+  padding-right: .5rem;
+  text-align: right;
+}
+
+.lang__tag {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
 @media screen and (min-width: 1024px) {
   .comunidade__main {
     display: flex;

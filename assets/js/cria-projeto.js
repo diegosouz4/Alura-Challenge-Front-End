@@ -1,19 +1,23 @@
 export function criaProjeto(projeto) {
-
   const listaDeProjetos = document.querySelector("[data-lista-projetos]");
   const novaLi = document.createElement("li");
 
   novaLi.classList.add("editor__card");
-  novaLi.innerHTML = `<a href="#"><div class="editor__container" style="background-color: ${projeto.color};">
-    <code class="editor__code hljs ${projeto.lang}" aria-label="editor"></code>
+  novaLi.innerHTML = `<a href="#"><div class="editor__container" style="background-color: ${projeto.descricaoProjeto.color};">
+    <code class="editor__code hljs ${projeto.descricaoProjeto.lang}" aria-label="editor"></code>
 
-    <div class="dots"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
+    <div class="editor__info">
+      <div class="comunidade__dots"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
+      <div class="editor__lang"><span class="lang__tag" data-card-lang>${projeto.descricaoProjeto.lang}</span></div>
+    </div>
+
+
   </div>
 
   <div class="card__content">
     <div class="card__description">
-      <h2 class="card__titulo">${projeto.title}</h2>
-      <p class="card__about">${projeto.description}</p>
+      <h2 class="card__titulo">${projeto.descricaoProjeto.title}</h2>
+      <p class="card__about">${projeto.descricaoProjeto.description}</p>
     </div>
     <div class="card__actions">
       <div class="actions__icones">

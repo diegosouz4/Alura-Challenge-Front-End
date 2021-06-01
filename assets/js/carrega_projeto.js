@@ -1,20 +1,16 @@
-import {criaProjeto} from './cria-projeto.js';
+import { criaProjeto } from "./cria-projeto.js";
 
-let projetosSalvos = new Array();
+if (localStorage.length > 0) {
+  for (let i = 0; i < localStorage.length; i++) {
+    let novoProjeto = JSON.parse(localStorage.getItem(i));
+    criaProjeto(novoProjeto);
 
-if(localStorage.hasOwnProperty('projetos')){
-    projetosSalvos = JSON.parse(localStorage.getItem('projetos'));
+    let codeContent = document.querySelectorAll("code");
+    let novoCodigo = codeContent[i];
 
-    projetosSalvos.forEach((projeto) => {
-        criaProjeto(projeto);
-    })
-
-    let codeContent = document.querySelectorAll('code');
-    let codeContainer = document.querySelectorAll('.editor__container');
-
-    for(let i = 0; i < codeContent.length; i++){
-        codeContent[i].innerText = projetosSalvos[i].code;
-        let hl = codeContainer[i].querySelector("code");
-        hljs.highlightBlock(hl);
-    }
+    novoCodigo.innerText = novoProjeto.descricaoProjeto.code;
+    hljs.highlightBlock(novoCodigo);
+  }
+} else {
+  console.log("Não há projetos salvos");
 }

@@ -17,6 +17,10 @@
   width: calc(100% - 3rem);
 }
 
+.comunidade__dots{
+  display: flex;
+}
+
 .dot {
   background: var(--branco);
   border-radius: 100%;
