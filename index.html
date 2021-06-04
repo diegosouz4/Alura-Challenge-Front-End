@@ -108,13 +108,42 @@
             contenteditable="true"
             aria-label="editor"
           ></code>
-
           <div class="dots">
             <span class="dot dot--red"></span>
             <span class="dot dot--yellow"></span>
             <span class="dot dot--green"></span>
           </div>
         </div>
+
+        <div class="editor__export">
+          <button id="exportNav" class="export__nav"><img src="./assets/img/icons/icon-save.svg" alt="exportar código"></button>
+          <div class="export__container">
+            <div class="export__content">
+              <h2 class="export__title">Salvar como:</h2>
+              <button id="exportButtonImg" class="export__button">
+                Salvar
+              </button>
+              <select id="exportSelectImg" class="export__select">
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="svg">SVG</option>
+              </select>
+            </div>
+
+            <div class="export__content">
+              <h2 class="export__title">Exportar como:</h2>
+              <button id="exportButtonCode" class="export__button">
+                Exportar
+              </button>
+              <select id="exportSelectCode" class="export__select">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">Javascript</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
         <button id="chooseLang" class="editor__button button button--outline">
           Visualizar com o highlight
         </button>
@@ -133,7 +162,8 @@
             class="input"
             id="project__description"
             rows="5"
-            placeholder="Descrição do projeto" data-description
+            placeholder="Descrição do projeto"
+            data-description
           ></textarea>
         </div>
         <div class="project__settings">
@@ -148,7 +178,8 @@
             id="editorColor"
             type="color"
             value="#6bd1ff"
-            class="project__color" data-color
+            class="project__color"
+            data-color
           />
         </div>
         <button data-save-btn class="project__button button button--fill">
@@ -156,10 +187,8 @@
         </button>
       </aside>
     </section>
-    <script src="./assets/js/menu-Mobile.js"></script>
-    <script src="./assets/js/editor-color.js"></script>
-    <script src="./assets/js/salvaDados.js"></script>
+    <script type="module" src="./assets/js/home.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-    <script src="./assets/js/highlight.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
   </body>
 </html>

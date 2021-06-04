@@ -1,5 +1,5 @@
 input:not([type="color"]),
-select,
+select:not(.export__select),
 .input {
   background: none;
   background-color: var(--branco-16);
@@ -13,7 +13,7 @@ select,
 }
 
 input:not([type="color"]):hover,
-select:hover,
+select:not(.export__select):hover,
 .input:hover {
   background-color: var(--branco-24);
 }

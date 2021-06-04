@@ -20,13 +20,16 @@
   --blue-rgba-400: 5, 29, 59;
 
   --red: #f65151;
-  --gold: #fcb941;
+  --gold-100: #fcb941;
+  --gold-300: #c5881b;
 
   --mac-red: #ff5f56;
   --mac-yellow: #ffbd2e;
   --mac-green: #27c93f;
 
   --gray-300: #141414;
+  --black-100: #232222;
+  --black-200: #191818;
   --black-16: rgba(0, 0, 0, 0.16);
 
   --box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.24);
