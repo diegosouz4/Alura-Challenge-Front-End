@@ -1,8 +1,12 @@
+import { criaModal } from './cria-modal.js';
 import {deletaProjeto} from './deleta_projeto.js'
 (() => {
   const btnSave = document.querySelector("[data-save-btn]");
   const btnDel = document.querySelector("[data-delete-btn]");
   const valorId = checaUrl();
+  const modalContainer = document.querySelector("[data-modal]");
+
+  
 
   btnSave.addEventListener("click", (e) => {
     e.preventDefalt;
@@ -32,6 +36,9 @@ import {deletaProjeto} from './deleta_projeto.js'
 
     const dadosDoProjeto = pegaDados(titulo, descricao, linguagem, cor, codigo);
     salvaProjeto(dadosDoProjeto);
+    
+    modalContainer.classList.remove('is--hide')
+    modalContainer.innerHTML = criaModal("Projeto Salvo!", "parabéns, você acabou de salvar o seu primeiro projeto.", "Editar projeto", `/?id=${dadosDoProjeto.id}`);
   }
 
   function pegaDados(titulo, descricao, linguagem, cor, codigo) {
@@ -66,7 +73,6 @@ import {deletaProjeto} from './deleta_projeto.js'
     if (localStorage !== "undefined") {
       console.log("possui localstorage");
       localStorage.setItem(projeto.id, JSON.stringify(projeto));
-      // window.location.href = "./comunidade.html";
       return;
     }
 
@@ -109,5 +115,16 @@ import {deletaProjeto} from './deleta_projeto.js'
   btnDel.addEventListener("click", (e) => {
     e.preventDefault;
     deletaProjeto(valorId);
+    modalContainer.classList.remove('is--hide')
+    modalContainer.innerHTML = criaModal("Projeto deletado!", "O projeto foi deletado com sucesso.", "Criar um projeto", "/");
   });
+
+  modalContainer.addEventListener('click', (e) => {
+    const alvo = e.target;
+    const btnmodal = modalContainer.querySelector('[data-btn-modal]');
+
+    if(alvo == btnmodal) {
+      modalContainer.classList.add('is--hide')
+    }
+  })
 })();

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css" />
     <link rel="stylesheet" href="./assets/css/modulos/code-editor.css" />
     <link rel="stylesheet" href="./assets/css/modulos/user.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/modal.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/helpers.css" />
     <link rel="stylesheet" href="./assets/css/paginas/home.css" />
@@ -191,11 +192,15 @@
         <button data-save-btn class="project__button button button--fill">
           Salvar projeto
         </button>
-        <button data-delete-btn class="project__button button button--outline is--hide">
+        <button
+          data-delete-btn
+          class="project__button button button--outline is--hide"
+        >
           Deletar projeto
         </button>
       </aside>
     </section>
+    <div data-modal class="modal is--hide"></div>
     <script type="module" src="./assets/js/home.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>

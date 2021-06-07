@@ -1,4 +1,5 @@
 import { criaProjeto } from "./cria-projeto.js";
+import { mostraMensagem } from "./mostra-mensagem.js"
 
 (() => {
   
@@ -15,6 +16,6 @@ import { criaProjeto } from "./cria-projeto.js";
       hljs.highlightBlock(novoCodigo);
     }
   } else {
-    console.log("Não há projetos salvos");
+    mostraMensagem();
   }
 })();
