@@ -1,5 +1,8 @@
+import {deletaProjeto} from './deleta_projeto.js'
 (() => {
   const btnSave = document.querySelector("[data-save-btn]");
+  const btnDel = document.querySelector("[data-delete-btn]");
+  const valorId = checaUrl();
 
   btnSave.addEventListener("click", (e) => {
     e.preventDefalt;
@@ -33,6 +36,15 @@
 
   function pegaDados(titulo, descricao, linguagem, cor, codigo) {
     let novoId = localStorage.length;
+    let likesAtual = 0;
+    let commentsAtual = 0;
+
+    if (valorId > -1) {
+      let dadosSalvos = JSON.parse(localStorage.getItem(valorId));
+      novoId = valorId;
+      likesAtual = dadosSalvos.descricaoProjeto.likes;
+      commentsAtual = dadosSalvos.descricaoProjeto.comments;
+    } 
 
     const novoProjeto = {
       id: novoId,
@@ -42,6 +54,8 @@
         lang: linguagem,
         color: cor,
         code: codigo,
+        likes: likesAtual,
+        comments: commentsAtual,
       },
     };
 
@@ -52,10 +66,48 @@
     if (localStorage !== "undefined") {
       console.log("possui localstorage");
       localStorage.setItem(projeto.id, JSON.stringify(projeto));
-      window.location.href = "./comunidade.html";
+      // window.location.href = "./comunidade.html";
       return;
     }
 
     console.log("não suporta localstorage");
   }
+
+  function checaUrl() {
+    const urlAtual = window.location.href;
+    const primeiroParametro = urlAtual.split("?");
+
+    if (primeiroParametro[1] == undefined) return -1;
+
+    const segundoParametro = primeiroParametro[1].split("=");
+    const urlId = parseInt(segundoParametro[1]);
+
+    dadosParaEditar(urlId);
+    btnDel.classList.remove('is--hide');
+    btnSave.textContent = "Atualizar projeto"
+    return urlId;
+  }
+
+  function dadosParaEditar(id) {
+    const dadosProjeto = JSON.parse(localStorage.getItem(id));
+
+    const campoTitulo = document.querySelector("[data-title]");
+    const campoDescricao = document.querySelector("[data-description]");
+    const campoLinguagem = document.querySelector("[data-codeLang]");
+    const campoCor = document.querySelector("[data-color]");
+    const bgCampoCor = document.querySelector("#editorContainer");
+    const campoCodigo = document.querySelector("code");
+
+    campoTitulo.value = dadosProjeto.descricaoProjeto.title;
+    campoDescricao.value = dadosProjeto.descricaoProjeto.description;
+    campoLinguagem.value = dadosProjeto.descricaoProjeto.lang;
+    campoCor.value = dadosProjeto.descricaoProjeto.color;
+    bgCampoCor.style.backgroundColor = dadosProjeto.descricaoProjeto.color;
+    campoCodigo.innerText = dadosProjeto.descricaoProjeto.code;
+  }
+
+  btnDel.addEventListener("click", (e) => {
+    e.preventDefault;
+    deletaProjeto(valorId);
+  });
 })();

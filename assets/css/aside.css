@@ -22,6 +22,10 @@
   width: 100%;
 }
 
+.project>button:last-child{
+  margin-top:.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .project__settings {
     display: flex;

@@ -233,6 +233,6 @@ code {
 }
 
 .lang__tag {
-  color: var(--gold);
+  color: var(--gold-100);
   font-size: 0.8rem;
 }
